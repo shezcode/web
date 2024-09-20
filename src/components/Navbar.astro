@@ -1,0 +1,30 @@
+---
+import { Button } from "./ui/button";
+import { ModeToggle } from "./ModeToggle.tsx";
+import { Separator } from "./ui/separator";
+---
+
+<nav class="w-screen flex flex-row gap-4 items-center justify-around p-4">
+  <div class="flex flex-row w-[60%] items-center justify-around">
+    <li class="list-none">
+      <Button variant="link">
+        <a href="/">Home</a>
+      </Button>
+    </li>
+    <Separator className="w-4"/>
+    <li class="list-none">
+      <Button variant="link">
+        <a href="/blog">Blog</a>
+      </Button>
+    </li>
+    <Separator className="w-4"/>
+    <li class="list-none">
+      <Button variant="link">
+        <a href="/projects">Projects</a>
+      </Button>
+    </li>
+  </div>
+  <div class="self-end">
+    <ModeToggle client:load />
+  </div>
+</nav>
